@@ -4,7 +4,7 @@ import csv
 
 def csv_writer(data, path):
 	with open(path, "wb") as csv_file:
-		writer = csv.writer(csv_file, delimiter = ',')
+		writer = csv.writer(csv_file, delimiter = ' ')
 		for line in data:
 			writer.writerow(line)
 
@@ -26,10 +26,8 @@ try:
 #		row = list(row)
 #		row.pop(0)
 		list.append(row)
-		print list
-#		data.append(list)
-#		print data
 
+	print list
 	if __name__ == "__main__":
 		csv_writer(list, path)
 
